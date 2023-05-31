@@ -1,0 +1,22 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "Frontend for my baby tracking app",
+  "main": "App.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "author": "Bill Munkacsy",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "bootstrap": "^5.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.11.2",
+    "sass": "^1.62.1"
+  }
+}
