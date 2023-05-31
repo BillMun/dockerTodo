@@ -1,11 +1,16 @@
 import React from "react"
-import axios from "axios"
+import {Routes, Route} from 'react-router-dom'
+import Splash from "./components/Splash"
+import Hello from "./components/Hello"
 
 
 export default function App (props){
     return(
-        <div>
-            Welcome to my baby tracking app!
+        <div id="main">
+            <Routes>
+                <Route index element = {<Splash/>}/>
+                <Route path={'/hello'} element={<Hello/>}/>
+            </Routes>
         </div>
     )
 }

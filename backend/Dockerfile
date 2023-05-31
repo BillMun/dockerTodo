@@ -11,9 +11,9 @@ RUN npm ci
 
 COPY . /usr/src/app
 
-EXPOSE 4500
+EXPOSE 3000
 
-CMD [ "npm", "run", "dev" ]
+CMD [ "npm", "run", "start" ]
 
 FROM development as dev-envs
 RUN <<EOF
@@ -28,4 +28,4 @@ usermod -aG docker vscode
 EOF
 
 COPY --from=gloursdocker/docker / /
-CMD [ "npm", "run", "dev" ]
+CMD [ "npm", "run", "start" ]

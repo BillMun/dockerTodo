@@ -1,24 +1,39 @@
-const express = require('express')
-const serverResponses = require('../utils/responses.js')
-const messages = require("../config/mesages")
-const { Todo } = require('../models/todos/todo')
+const express = require("express");
+const serverResponses = require("../utils/responses");
+const messages = require("../config/messages");
+const { BabyName } = require("../models/BabyName");
 
-const routes = (app) =>{
-    const router = express.Router()
+const routes = (app) => {
+  const router = express.Router();
 
-    router.post("/todos", (req,res)=>{
-        const todo = new Todo({
-            text: req.body.text
-        })
-        todo.save()
-        .then((result)=>{
-            serverResponses.sendSuccess(res, messages.SUCCESSFUL, result)
-        }).catch((e)=>{
-            serverResponses.sendError(res, messages.BAD_REQUEST,e)
-        })
-    })
+  router.post("/babyname", (req, res) => {
+    const babyname = new BabyName({
+      text: req.body.text,
+    });
 
-    router.get("/", (req))
-}
+    babyname
+      .save()
+      .then((result) => {
+        serverResponses.sendSuccess(res, messages.SUCCESSFUL, result);
+      })
+      .catch((e) => {
+        serverResponses.sendError(res, messages.BAD_REQUEST, e);
+      });
+  });
 
-module.exports = routes
+
+
+  router.get("/", (req, res) => {
+    BabyName.find({}, { __v: 0 })
+      .then((todos) => {
+        serverResponses.sendSuccess(res, messages.SUCCESSFUL, todos);
+      })
+      .catch((e) => {
+        serverResponses.sendError(res, messages.BAD_REQUEST, e);
+      });
+  });
+
+
+  app.use("/api", router);
+};
+module.exports = routes;

@@ -20,7 +20,7 @@ RUN npm ci
 COPY . /usr/src/app
 
 # Expose the port the app runs in
-EXPOSE 4500
+EXPOSE 3000
 
 # Serve the app
 CMD ["npm", "start"]

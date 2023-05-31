@@ -1,27 +1,30 @@
-const express = require('express')
-const path = require('path')
-const cors = require('cors')
-const cookieParser = require("cookie-parser")
-const bodyParser = require("body-parser")
-const cors = require("cors")
-const db = require('./db')
+require("./config/config");
 
-const app = express()
+const express = require("express");
+const path = require("path");
+const cookieParser = require("cookie-parser");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const db = require("./db");
 
-db.connect(app)
+const app = express();
 
-app.use(cors())
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({extended:false}))
-app.use(cookieParser())
-app.use(express.static(path.join(__dirname, "public")))
+//connection from db here
+db.connect(app);
 
-require("./routes")(app)
+app.use(cors());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, "public")));
 
-app.on("ready", ()=>{
-    app.listen(4500, ()=>{
-        console.log("Server is up on port", 4500)
-    })
-})
+//  adding routes
+require("./routes")(app);
+
+app.on("ready", () => {
+  app.listen(3000, () => {
+    console.log("Server is up on port", 3000);
+  });
+});
 
 module.exports = app;

@@ -4,7 +4,7 @@ services:
       context: frontend
       target: development
     ports: 
-      - 4500:4500
+      - 3000:3000
     stdin_open: true
     volumes: 
       - ./frontend:/usr/src/app
@@ -29,7 +29,7 @@ services:
       - express-mongo
       - react-express
     expose:
-      - 4500
+      - 3000
   mongo:
     restart: always
     image: mongo:4.2.0
