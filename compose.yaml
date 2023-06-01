@@ -1,5 +1,6 @@
 services:
   frontend:
+    container_name: frontend
     build:
       context: frontend
       target: development
@@ -16,10 +17,15 @@ services:
       - backend 
 
   backend:
+    container_name: server
     restart: always
     build:
-      context: backend
+      context: server
       target: development
+      args: 
+        NODE_PORT: 3001
+    ports:
+      - 3001:3001
     volumes:
       - ./backend:/usr/src/app
       - /usr/src/app/node_modules
@@ -31,6 +37,7 @@ services:
     expose:
       - 3000
   mongo:
+    container_name: mongo
     restart: always
     image: mongo:4.2.0
     volumes:

@@ -6,11 +6,13 @@ const { BabyName } = require("../models/BabyName");
 const routes = (app) => {
   const router = express.Router();
 
-  router.post("/babyname", (req, res) => {
+  router.post('/babyname', async (req, res) => {
+    console.log(req.body)
+    try{
+    console.log(req.body)
     const babyname = new BabyName({
-      text: req.body.text,
+      name: req.body.name,
     });
-
     babyname
       .save()
       .then((result) => {
@@ -18,10 +20,9 @@ const routes = (app) => {
       })
       .catch((e) => {
         serverResponses.sendError(res, messages.BAD_REQUEST, e);
-      });
+      });}
+      catch(error){next(error)}
   });
-
-
 
   router.get("/", (req, res) => {
     BabyName.find({}, { __v: 0 })
@@ -34,6 +35,6 @@ const routes = (app) => {
   });
 
 
-  app.use("/api", router);
+  app.use('/api', router);
 };
 module.exports = routes;

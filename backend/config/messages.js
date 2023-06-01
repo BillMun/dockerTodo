@@ -37,7 +37,7 @@ module.exports = {
     NOT_FOUND: {
       code: 404,
       success: true,
-      message: "Requested API not found",
+      message: "Requested API not found asdfsad ",
     },
     ALREADY_EXIST: {
       code: 200,
