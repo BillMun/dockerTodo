@@ -1,5 +1,5 @@
 {
-  "name": "docker_todo_backend",
+  "name": "backend",
   "version": "1.0.0",
   "description": "backend for my baby tracking app built using docker",
   "main": "index.js",

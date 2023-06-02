@@ -6,7 +6,6 @@ export default function AddBabyName (){
     const handleAddBabyName = (e)=>{
         e.preventDefault()
         const { value } = e.target.elements.value
-        console.log(value)
         axios
             .post('http://localhost:3001/api/babyname', {name:value})
             .then(()=>{
@@ -16,7 +15,7 @@ export default function AddBabyName (){
     }
     return(
         <div>
-            <p>{babyname.length > 0 ? babyname:'please enter your babyname'}</p>
+            <p>Please enter your baaabby's name!</p>
             <form
                 onSubmit={handleAddBabyName}
             >

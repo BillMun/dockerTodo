@@ -1,5 +1,6 @@
 import React from "react";
 import AddBabyName from "./AddBabyName";
+import LookupBabyName from "./LookupBabyName";
 
 export default function Splash (){
     return(
@@ -8,7 +9,7 @@ export default function Splash (){
                 Welcome to track that baby!
             </h1>
             <AddBabyName/>
-            
+            <LookupBabyName/>
         </div>
     )
 }
