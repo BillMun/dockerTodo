@@ -33,9 +33,5 @@ jobs:
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/trackthatbaby:backend-latest
       - 
         name: Build and push Mongo image
-        uses: docker/build-push-action@v4
-        with:
-          context: mongo
-          push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/trackthatbaby:mongo-4.2.0
+        run: docker pull mongo:4.2.0 && docker tag mongo:4.2.0 ${{ secrets.DOCKERHUB_USERNAME }}/trackthatbaby:mongo && docker push ${{ secrets.DOCKERHUB_USERNAME }}/trackthatbaby:mongo
     
