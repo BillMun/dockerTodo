@@ -13,7 +13,7 @@
 
 ### Installation
 
-1. git clone git@github.com:BillMun/dockerTrackThatBaby.gi
+1. git clone git@github.com:BillMun/dockerTrackThatBaby.git
 2. Download and install Docker desktop https://www.docker.com/
 3. Start Docker on your desktop
 4. docker compose up -d
