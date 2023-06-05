@@ -22,7 +22,6 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: frontend
-          file: ./compose.yaml
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/trackthatbaby:frontend-latest
       -
@@ -30,7 +29,6 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: backend
-          file: ./compose.yaml
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/trackthatbaby:backend-latest
       - 
@@ -38,7 +36,6 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: mongo
-          file: ./compose.yaml
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/trackthatbaby:mongo-4.2.0
     
