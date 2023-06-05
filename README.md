@@ -33,11 +33,11 @@
 [Express]: https://img.shields.io/badge/EXPRESS-A020F0?style=for-the-badge&logo=javascript&logoColor=white
 [Express-url]:https://expressjs.com/
 
-[MongoDB]: https://img.shields.io/badge/MongoDB-MongoDB-blue
+[MongoDB]: https://img.shields.io/badge/MongoDB-A020F0?style=for-the-badge&logo=Redux&logoColor=Blue
 [MongoDB-url]:https://www.mongodb.com/
 
-[Mongoose]: https://img.shields.io/badge/PostGreSQL-0000FF?style=for-the-badge&logo=PostGreSQL&logoColor=black
+[Mongoose]: https://img.shields.io/badge/Mongoose-0000FF?style=for-the-badge&logo=PostGreSQL&logoColor=black
 [Mongoose-url]:https://mongoosejs.com/
 
-[Docker]: https://img.shields.io/badge/Redux-A020F0?style=for-the-badge&logo=Redux&logoColor=white
+[Docker]: https://img.shields.io/badge/Docker-A020F0?style=for-the-badge&logo=Redux&logoColor=white
 [Docker-url]:https://www.docker.com/
