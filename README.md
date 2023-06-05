@@ -33,7 +33,7 @@
 [Express]: https://img.shields.io/badge/EXPRESS-A020F0?style=for-the-badge&logo=javascript&logoColor=white
 [Express-url]:https://expressjs.com/
 
-[MongoDB]: https://img.shields.io/badge/MongoDB-F6F6FF?style=for-the-badge&logo=Redux&logoColor=Blue
+[MongoDB]: https://img.shields.io/badge/MongoDB-000000?style=for-the-badge&logo=Redux&logoColor=Blue
 [MongoDB-url]:https://www.mongodb.com/
 
 [Mongoose]: https://img.shields.io/badge/Mongoose-0000FF?style=for-the-badge&logo=PostGreSQL&logoColor=black
