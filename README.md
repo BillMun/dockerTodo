@@ -7,9 +7,9 @@
 [![React.js][React.js]][React-url]
 [![Node.js][Node.js]][Node.js-url]
 [![Express][Express]][Express-url]
-[![MongoDB][MongoDB]][Sequelize-url]
-[![Mongoose][Mongoose]][PostGreSQL-url]
-[![Docker][Docker]][Redux-url]
+[![MongoDB][MongoDB]][MongoDB-url]
+[![Mongoose][Mongoose]][Mongoose-url]
+[![Docker][Docker]][Docker-url]
 
 ### Installation
 
@@ -33,11 +33,11 @@
 [Express]: https://img.shields.io/badge/EXPRESS-A020F0?style=for-the-badge&logo=javascript&logoColor=white
 [Express-url]:https://expressjs.com/
 
-[MongoDB]: https://img.shields.io/badge/Sequelize-ADD8E6?style=for-the-badge&logo=Sequelize&logoColor=blue
-[Sequelize-url]:https://www.mongodb.com/
+[MongoDB]: https://img.shields.io/badge/MongoDB-MongoDB-blue
+[MongoDB-url]:https://www.mongodb.com/
 
 [Mongoose]: https://img.shields.io/badge/PostGreSQL-0000FF?style=for-the-badge&logo=PostGreSQL&logoColor=black
-[PostGreSQL-url]:https://mongoosejs.com/
+[Mongoose-url]:https://mongoosejs.com/
 
 [Docker]: https://img.shields.io/badge/Redux-A020F0?style=for-the-badge&logo=Redux&logoColor=white
-[Redux-url]:https://www.docker.com/
+[Docker-url]:https://www.docker.com/
