@@ -3,3 +3,4 @@ backend/node_modules/
 data
 .idea/
 frontend/node_modules/
+.terraform
