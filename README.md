@@ -17,6 +17,7 @@
 2. Download and install Docker desktop https://www.docker.com/
 3. Start Docker on your desktop
 4. docker compose up -d
+5. go to localhost:3000 on your browser
 
 
 
