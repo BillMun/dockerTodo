@@ -30,6 +30,9 @@ export default function SingleBaby (){
             <GetBabyHeights props={babyName}/>
             <DeleteBaby props={babyName}/>
             </div> : null}
+            <div>
+                <a href='/'>return Home</a> 
+            </div>
         </div>
     )
 }

@@ -224,6 +224,7 @@ resource "aws_ecs_service" "track_that_baby_mongo_service" {
   launch_type     = "FARGATE"
   desired_count   = 1
 
+
   load_balancer {
     target_group_arn = aws_lb_target_group.target_group.arn # Reference the target group
     container_name   = aws_ecs_task_definition.track_that_baby_mongo.family
@@ -232,7 +233,7 @@ resource "aws_ecs_service" "track_that_baby_mongo_service" {
 
   network_configuration {
     subnets          = ["${aws_default_subnet.default_subnet_a.id}", "${aws_default_subnet.default_subnet_b.id}"]
-    assign_public_ip = false                                               # Provide the containers with public IPs
+    assign_public_ip = true                                                # Provide the containers with public IPs
     security_groups  = ["${aws_security_group.service_security_group.id}"] # Set up the security group
   }
 }
